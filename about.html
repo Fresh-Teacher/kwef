@@ -204,11 +204,19 @@
     </div>
     
       
-<br><footer style="background-color: #f2f2f2;">
+<br><footer style="background-color: #f2f2f2; padding: 20px 0;">
     <center>
-        <p>&copy; 2023 Kibale Welfare and Education Foundation Limited. All rights reserved.</p>
+        <p>&copy; <span id="currentYear"></span> Kibale Welfare and Education Foundation Limited. All rights reserved.</p>
     </center>
 </footer>
+
+<script>
+    // Get the current year and update the content of the 'currentYear' span
+    const currentYearSpan = document.getElementById('currentYear');
+    const currentYear = new Date().getFullYear();
+    currentYearSpan.textContent = currentYear;
+</script>
+
                             
 
     <script>
