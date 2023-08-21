@@ -161,7 +161,38 @@
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
-    <script>
+    <div class="back-to-top" onclick="scrollToTop()">
+        <b class="fas fa-arrow-up"></b>
+    </div>
+
+    
+</div>
+
+  
+<br><footer style="background-color: #f2f2f2;">
+<center>
+    <p>&copy; 2023 Kibale Welfare and Education Foundation Limited. All rights reserved.</p>
+</center>
+</footer>
+                        
+
+<script>
+    // Show or hide the "Back to Top" button based on scroll position
+    window.onscroll = function() {
+        var backToTopBtn = document.querySelector('.back-to-top');
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            backToTopBtn.style.display = 'block';
+        } else {
+            backToTopBtn.style.display = 'none';
+        }
+    };
+
+    // Scroll to the top of the page
+    function scrollToTop() {
+        document.body.scrollTop = 0; // For Safari
+        document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+    }
+   
         const photos = ["images/CLINICS 2.jpg",
          "images/CLOTHES 1.jpg",
           "images/CLOTHES 2.jpg",
