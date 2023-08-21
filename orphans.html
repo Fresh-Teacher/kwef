@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Gallery</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css">
+    <style>
+        /* Add your custom styles here */
+    </style>
+</head>
+<body>
+    <div class="col-md-12 mb-4">
+        <div class="alert alert-info">
+            <p><strong><u>ORPHANAGE SUPPORT</u></strong><br> In the embrace of Allah's mercy, the Kibale Welfare and Education Foundation Limited extends its hands to uplift the lives of orphans and vulnerable children. Through the noble act of supporting their general welfare, education, and health sponsorship, we aim to become a means of hope and light in their lives.</p>
+            <p>With every step we take, we believe that we are walking the path of righteousness, guided by the teachings of Islam that emphasize compassion, kindness, and charity. Our mission resonates with the essence of giving, mirroring the boundless mercy of Allah that we, as His humble servants, strive to reflect on this Earth.</p>
+            <p>As we envision a brighter future for these young souls, we humbly invite those who hold the same values in their hearts to join us in this noble endeavor. By contributing to this cause, you are not merely donating; you are sowing the seeds of positivity, resilience, and opportunity in the lives of those who need it most.</p>
+            <p>Let us unite in this virtuous journey, knowing that the blessings of our actions will transcend time and space, reaching corners we may never know. With unwavering faith and the sincerity of intention, we ask for your support to make a lasting impact in the lives of these children.</p>
+            <p>May Allah's mercy and blessings be upon all those who extend their hands in generosity, for with each donation, we collectively become a source of solace, a beacon of hope, and a channel of Allah's love.</p>
+            <p>Together, let us create a legacy that shines eternally, and insha'Allah, the light we share will illuminate countless futures.</p>
+            <p><em>"Whoever relieves a believer's distress of the distressful aspects of this world, Allah will rescue him from a difficulty of the difficulties of the Hereafter..." (Sahih Muslim)</em></p>
+            <p class="arabic-text">
+                "مَنۡ نَفَّسَ عَن مُّؤۡمِنٍ۬ كُرۡبَةً۬ مِّن كُرَبِ ٱلدُّنۡيَا نَفَّسَ ٱللَّهُ عَنۡهُ كُرۡبَةً۬ مِّن كُرَبِ ٱلۡأَخِرَةِۚ وَمَن يَسَّرَ عَلَىٰ مُعۡسِرٍ۬ۢ يَسَّرَ ٱللَّهُ عَلَيۡهِ فِى ٱلدُّنۡيَا وَٱلۡأَخِرَةِۗ وَمَن سَتَرَ مُسۡلِمً۬ا سَتَرَهُ ٱللَّهُ فِى ٱلدُّنۡيَا وَٱلۡأَخِرَةِۗ وَٱللَّهُ فِى عَوۡنِ ٱلۡعَبۡدِ مَا كَانَ ٱلۡعَبۡدُ فِى عَوۡنِ أَخِيهِۗ وَمَن سَلَكَ طَرِيقً۬ا يَلۡتَمِسُ فِيهِ عِلۡمً۬ا سَهَّلَ ٱللَّهُ لَهُ ۥ بِهِۦ طَرِيقً۬ا إِلَى ٱلۡجَنَّةِ"
+            </p>
+            <p class="translation-text">
+                <em>"Whoever relieves a believer's distress of the distressful aspects of this world, Allah will rescue him from a difficulty of the difficulties of the Hereafter. Whoever makes it easy for the one in difficulty, Allah will make it easy for him in this world and in the Hereafter. Whoever conceals the faults of a Muslim, Allah will conceal his faults in this world and in the Hereafter. Allah helps the servant as long as the servant helps his brother. Whoever treads a path in search of knowledge, Allah will make easy for him a path to Paradise."</em>
+            </p>
+            <p><strong>Donate today for the sake of Allah's pleasure and the eternal reward of contributing to a sacred legacy.</strong></p>
+            <a href="https://api.whatsapp.com/send?phone=+256783919781&text=Hi%20KWEF%20Admin,%20I%20would%20like%20to%20support%20you!%20Insha%20Allah." class="btn btn-success btn-lg mt-3">
+               DONATE NOW <i class="fas fa-hand-holding-usd"></i> 
+            </a>        </div>
+    </div>
+    
+    
+    <div class="container mt-4">
+        <div id="photoGallery" class="row">
+            <!-- Photos will be added here dynamically -->
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+    <script>
+        const photos = ["images/CLINICS 2.jpg",
+         "images/CLOTHES 1.jpg",
+          "images/CLOTHES 2.jpg",
+          "images/health3.jpg",
+          "images/home4.jpg",
+          "images/HOUSES 1.jpg",
+          "images/HOUSES 2.jpg",
+          "images/HOUSES 3.jpg",
+          "images/IMG-20230810-WA0012.jpg",
+          "images/IMG-20230810-WA0014.jpg",
+          "images/IMG-20230810-WA0018.jpg",
+          "images/IMG-20230810-WA0019.jpg",
+          "images/IMG-20230810-WA0021.jpg",
+          "images/IMG-20230810-WA0022.jpg",
+          "images/IMG-20230810-WA0023.jpg",
+          "images/IMG-20230810-WA0024.jpg",
+          "images/IMG-20230810-WA0025.jpg",
+          "images/IMG-20230810-WA0026.jpg",
+          "images/IMG-20230810-WA0027.jpg",
+          "images/IMG-20230810-WA0028.jpg",
+          "images/IMG-20230810-WA0029.jpg",
+          "images/IMG-20230810-WA0030.jpg",
+          "images/IMG-20230810-WA0031.jpg",
+          "images/IMG-20230810-WA0032.jpg",
+          "images/IMG-20230810-WA0033.jpg",
+          "images/IMG-20230810-WA0034.jpg",
+          "images/IMG-20230810-WA0035.jpg",
+          "images/IMG-20230810-WA0036.jpg",
+          "images/IMG-20230810-WA0037.jpg",
+          "images/IMG-20230810-WA0038.jpg",
+          "images/IMG-20230810-WA0039.jpg",
+          "images/IMG-20230810-WA0040.jpg",
+          "images/IMG-20230810-WA0041.jpg",
+          "images/IMG-20230810-WA0042.jpg",
+          "images/IMG-20230810-WA0043.jpg",
+          "images/IMG-20230810-WA0044.jpg",
+          "images/IMG-20230810-WA0045.jpg",
+          "images/IMG-20230810-WA0046.jpg",
+          "images/IMG-20230810-WA0047.jpg",
+          "images/IMG-20230810-WA0048.jpg",
+          "images/IMG-20230810-WA0049.jpg",
+          "images/IMG-20230810-WA0050.jpg",
+          "images/IMG-20230810-WA0051.jpg",
+          "images/IMG-20230810-WA0052.jpg",
+          "images/IMG-20230810-WA0053.jpg",
+          "images/IMG-20230810-WA0054.jpg",
+          "images/IMG-20230810-WA0055.jpg",
+          "images/IMG-20230810-WA0056.jpg",
+          "images/IMG-20230810-WA0057.jpg",
+          "images/IMG-20230810-WA0058.jpg",
+          "images/IMG-20230810-WA0059.jpg",
+          "images/IMG-20230810-WA0060.jpg",
+          "images/IMG-20230810-WA0062.jpg",
+          "images/IMG-20230810-WA0064.jpg",
+          "images/IMG-20230810-WA0065.jpg",
+          "images/IMG-20230810-WA0066.jpg",
+          "images/IMG-20230810-WA0067.jpg",
+          "images/IMG-20230810-WA0068.jpg",
+          "images/IMG-20230810-WA0069.jpg",
+          "images/IMG-20230810-WA0070.jpg",
+          "images/IMG-20230810-WA0071.jpg",
+          "images/IMG-20230810-WA0072.jpg",
+          "images/IMG-20230810-WA0073.jpg",
+          "images/IMG-20230810-WA0074.jpg",
+          "images/IMG-20230810-WA0075.jpg",
+          "images/IMG-20230810-WA0076.jpg",
+          "images/IMG-20230810-WA0077.jpg",
+          "images/IMG-20230810-WA0078.jpg",
+          "images/IMG-20230810-WA0079.jpg",
+          "images/IMG-20230810-WA0080.jpg",
+          "images/IMG-20230810-WA0081.jpg",
+          "images/IMG-20230810-WA0082.jpg",
+          "images/IMG-20230810-WA0083.jpg",
+          "images/IMG-20230810-WA0084.jpg",
+          "images/IMG-20230810-WA0085.jpg",
+          "images/IMG-20230810-WA0087.jpg",
+          "images/IMG-20230810-WA0088.jpg",
+          "images/IMG-20230810-WA0089.jpg",
+          "images/IMG-20230810-WA0090.jpg",
+          "images/IMG-20230810-WA0091.jpg",
+          "images/IMG-20230810-WA0093.jpg",
+          "images/IMG-20230810-WA0094.jpg",
+          "images/IMG-20230810-WA0096.jpg",
+          "images/IMG-20230810-WA0097.jpg",
+          "images/IMG-20230810-WA0098.jpg",
+          "images/IMG-20230810-WA0099.jpg",
+          "images/IMG-20230810-WA0102.jpg",
+          "images/IMG-20230810-WA0103.jpg",
+          "images/mosque1.jpg",
+          "images/orphan1.jpg",
+          "images/qurban1.jpg",
+          "images/qurban3.jpg",
+          "images/ramadhan.jpg",
+          "images/school2.jpg",
+          "images/school2.jpg",
+        "images/ramadhan.jpg",
+              ];
+
+        const galleryContainer = document.getElementById('photoGallery');
+
+        function loadPhotos() {
+            photos.forEach((photoURL, index) => {
+                const photoCard = `
+                    <div class="col-md-3 mb-4">
+                        <a href="${photoURL}" data-fancybox="gallery" data-caption="Photo ${index + 1}" data-group="all-photos">
+                            <div class="card">
+                                <img src="${photoURL}" class="card-img-top" alt="Photo">
+                            </div>
+                        </a>
+                    </div>
+                `;
+                galleryContainer.innerHTML += photoCard;
+            });
+        }
+
+        loadPhotos();
+    </script>
+</body>
+</html>

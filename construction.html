@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Gallery</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css">
+    <style>
+        /* Add your custom styles here */
+    </style>
+</head>
+<body>
+    <div class="col-md-12 mb-4">
+        <div class="alert alert-info">
+            <p><strong><u>NEEDY HOUSE CONSTRUCTION</u></strong><br> Driven by the principles of compassion and solidarity, we embark on a mission to build houses for those in need—a mission that resonates with the teachings of Islam to care for our fellow human beings and uplift the less fortunate.</p>
+            <p>As the foundations are laid and the walls rise, we envision more than just structures. These houses are embodiments of hope, security, and warmth, providing shelter to families who have endured hardships. Each brick, each beam, is a testament to our commitment to the welfare of our community.</p>
+            <p>Through the act of building these homes, we alleviate the burden of homelessness, ensuring that families have a safe haven where they can rebuild their lives. This endeavor mirrors the noble example set by our Prophet Muhammad (ﷺ) who championed the cause of those in need.</p>
+            <p>However, achieving this goal requires collective effort and generosity. We extend a sincere invitation to you to be part of this noble journey. Your contribution is not just financial assistance; it is an investment in transforming lives, offering a chance for families to thrive.</p>
+            <p>Imagine the joy of a family moving into a home that your support helped create—a place of stability, comfort, and hope. Your kindness reverberates through time, becoming a lifeline for generations to come.</p>
+            <p>As we unite to construct these havens of dignity, let us reflect on the words of Allah in the Quran (4:36):</p>
+            <p class="arabic-text">
+                "وَٱعۡبُدُواْ ٱللَّهَ وَلَا تُشۡرِكُواْ بِهِۦ شَيۡ‍ٔٗاۖ وَبِٱلۡوَٰلِدَيۡنِ إِحۡسَـٰنٗا وَبِذِي ٱلۡقُرۡبَىٰ وَٱلۡيَتَـٰمَىٰ وَٱلۡمَسَـٰكِينِ وَٱلۡجَارِ ذِي ٱلۡقُرۡبَىٰ وَٱلۡجَارِ ٱلۡجُنُبِ وَٱلصَّاحِبِ بِٱلۡجَنۢبِ وَٱبۡنِ ٱلسَّبِيلِۖ وَمَا مَلَكَتۡ أَيۡمَـٰنُكُمۡۗ إِنَّ ٱللَّهَ لَا يُحِبُّ مَن كَانَ مُخۡتَالاً۬ فَخُورًا"
+            </p>
+            <p class="translation-text">
+                "And worship Allah and associate nothing with Him, and to parents do good, and to relatives, orphans, the needy, the near neighbor, the neighbor farther away, the companion at your side..."
+            </p>
+            <p><strong>Your contribution holds transformative power. Join us in building not just houses, but sanctuaries of hope, security, and compassion.</strong></p>
+            <a href="https://api.whatsapp.com/send?phone=+256783919781&text=Hi%20KWEF%20Admin,%20I%20would%20like%20to%20donate.%20Insha%20Allah." class="btn btn-success btn-lg mt-3">
+                DONATE NOW <i class="fas fa-hand-holding-usd"></i> 
+            </a>
+        </div>
+    </div>
+    
+    
+    
+    
+    <div class="container mt-4">
+        <div id="photoGallery" class="row">
+            <!-- Photos will be added here dynamically -->
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+    <script>
+        const photos = ["images/CLINICS 2.jpg",
+         "images/CLOTHES 1.jpg",
+          "images/CLOTHES 2.jpg",
+          "images/health3.jpg",
+          "images/home4.jpg",
+          "images/HOUSES 1.jpg",
+          "images/HOUSES 2.jpg",
+          "images/HOUSES 3.jpg",
+          "images/IMG-20230810-WA0012.jpg",
+          "images/IMG-20230810-WA0014.jpg",
+          "images/IMG-20230810-WA0018.jpg",
+          "images/IMG-20230810-WA0019.jpg",
+          "images/IMG-20230810-WA0021.jpg",
+          "images/IMG-20230810-WA0022.jpg",
+          "images/IMG-20230810-WA0023.jpg",
+          "images/IMG-20230810-WA0024.jpg",
+          "images/IMG-20230810-WA0025.jpg",
+          "images/IMG-20230810-WA0026.jpg",
+          "images/IMG-20230810-WA0027.jpg",
+          "images/IMG-20230810-WA0028.jpg",
+          "images/IMG-20230810-WA0029.jpg",
+          "images/IMG-20230810-WA0030.jpg",
+          "images/IMG-20230810-WA0031.jpg",
+          "images/IMG-20230810-WA0032.jpg",
+          "images/IMG-20230810-WA0033.jpg",
+          "images/IMG-20230810-WA0034.jpg",
+          "images/IMG-20230810-WA0035.jpg",
+          "images/IMG-20230810-WA0036.jpg",
+          "images/IMG-20230810-WA0037.jpg",
+          "images/IMG-20230810-WA0038.jpg",
+          "images/IMG-20230810-WA0039.jpg",
+          "images/IMG-20230810-WA0040.jpg",
+          "images/IMG-20230810-WA0041.jpg",
+          "images/IMG-20230810-WA0042.jpg",
+          "images/IMG-20230810-WA0043.jpg",
+          "images/IMG-20230810-WA0044.jpg",
+          "images/IMG-20230810-WA0045.jpg",
+          "images/IMG-20230810-WA0046.jpg",
+          "images/IMG-20230810-WA0047.jpg",
+          "images/IMG-20230810-WA0048.jpg",
+          "images/IMG-20230810-WA0049.jpg",
+          "images/IMG-20230810-WA0050.jpg",
+          "images/IMG-20230810-WA0051.jpg",
+          "images/IMG-20230810-WA0052.jpg",
+          "images/IMG-20230810-WA0053.jpg",
+          "images/IMG-20230810-WA0054.jpg",
+          "images/IMG-20230810-WA0055.jpg",
+          "images/IMG-20230810-WA0056.jpg",
+          "images/IMG-20230810-WA0057.jpg",
+          "images/IMG-20230810-WA0058.jpg",
+          "images/IMG-20230810-WA0059.jpg",
+          "images/IMG-20230810-WA0060.jpg",
+          "images/IMG-20230810-WA0062.jpg",
+          "images/IMG-20230810-WA0064.jpg",
+          "images/IMG-20230810-WA0065.jpg",
+          "images/IMG-20230810-WA0066.jpg",
+          "images/IMG-20230810-WA0067.jpg",
+          "images/IMG-20230810-WA0068.jpg",
+          "images/IMG-20230810-WA0069.jpg",
+          "images/IMG-20230810-WA0070.jpg",
+          "images/IMG-20230810-WA0071.jpg",
+          "images/IMG-20230810-WA0072.jpg",
+          "images/IMG-20230810-WA0073.jpg",
+          "images/IMG-20230810-WA0074.jpg",
+          "images/IMG-20230810-WA0075.jpg",
+          "images/IMG-20230810-WA0076.jpg",
+          "images/IMG-20230810-WA0077.jpg",
+          "images/IMG-20230810-WA0078.jpg",
+          "images/IMG-20230810-WA0079.jpg",
+          "images/IMG-20230810-WA0080.jpg",
+          "images/IMG-20230810-WA0081.jpg",
+          "images/IMG-20230810-WA0082.jpg",
+          "images/IMG-20230810-WA0083.jpg",
+          "images/IMG-20230810-WA0084.jpg",
+          "images/IMG-20230810-WA0085.jpg",
+          "images/IMG-20230810-WA0087.jpg",
+          "images/IMG-20230810-WA0088.jpg",
+          "images/IMG-20230810-WA0089.jpg",
+          "images/IMG-20230810-WA0090.jpg",
+          "images/IMG-20230810-WA0091.jpg",
+          "images/IMG-20230810-WA0093.jpg",
+          "images/IMG-20230810-WA0094.jpg",
+          "images/IMG-20230810-WA0096.jpg",
+          "images/IMG-20230810-WA0097.jpg",
+          "images/IMG-20230810-WA0098.jpg",
+          "images/IMG-20230810-WA0099.jpg",
+          "images/IMG-20230810-WA0102.jpg",
+          "images/IMG-20230810-WA0103.jpg",
+          "images/mosque1.jpg",
+          "images/orphan1.jpg",
+          "images/qurban1.jpg",
+          "images/qurban3.jpg",
+          "images/ramadhan.jpg",
+          "images/school2.jpg",
+          "images/school2.jpg",
+        "images/ramadhan.jpg",
+              ];
+
+        const galleryContainer = document.getElementById('photoGallery');
+
+        function loadPhotos() {
+            photos.forEach((photoURL, index) => {
+                const photoCard = `
+                    <div class="col-md-3 mb-4">
+                        <a href="${photoURL}" data-fancybox="gallery" data-caption="Photo ${index + 1}" data-group="all-photos">
+                            <div class="card">
+                                <img src="${photoURL}" class="card-img-top" alt="Photo">
+                            </div>
+                        </a>
+                    </div>
+                `;
+                galleryContainer.innerHTML += photoCard;
+            });
+        }
+
+        loadPhotos();
+    </script>
+</body>
+</html>

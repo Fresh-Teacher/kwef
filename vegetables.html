@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Gallery</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css">
+    <style>
+        /* Add your custom styles here */
+    </style>
+</head>
+<div class="col-md-12 mb-4">
+    <div class="alert alert-info">
+        <p><strong><u>VEGETABLES PROJECT</u></strong><br> Nourishment is a fundamental right of every individual, and through our Vegetables Project, we strive to ensure the availability of fresh, nutritious produce to our community. The project is a testament to the principles of self-reliance and sustainability upheld by Islam.</p>
+        <p>By cultivating a variety of vegetables, we not only promote healthy eating but also empower ourselves to be stewards of the earth, as taught by our faith. These homegrown blessings will be distributed to those in need, fostering a sense of unity and care within our community.</p>
+        <p>Just as the Quran teaches us:</p>
+        <p class="arabic-text">
+            "وَأۡنفِقُواْ مِمَّا رَزَقۡنَـٰكُم مِّن قَبۡلِ أَن يَأۡتِىَ أَحَدَكُمُ ٱلۡمَوۡتُ فَيَقُولَ رَبِّ لَوۡلَآ أَخَّرۡتَنِىٓ إِلَىٰٓ أَجَلٍ۬ قَرِيبٍ۬ فَأَصَّدَّقَ وَأَكُن مِّنَ ٱلصَّـٰلِحِينَ"
+        </p>
+        <p class="translation-text">
+            <em>"And spend [in the way of Allah] from what We have provided you before death approaches one of you and he says, 'My Lord, if only You would delay me for a brief term so I would give charity and be among the righteous.'" (Quran 63:10)</em>
+        </p>
+        <p>Your support in the Vegetables Project is an investment in the health and well-being of our community members, while also embodying the spirit of giving and compassion encouraged by Islam.</p>
+        <p><strong>Join hands with us in nurturing not only the earth but also the hearts of those in need through this initiative.</strong></p>
+        <a href="https://api.whatsapp.com/send?phone=+256783919781&text=Hi%20KWEF%20Admin,%20I%20would%20like%20to%20support%20you!%20Insha%20Allah." class="btn btn-success btn-lg mt-3">
+            SUPPORT NOW <i class="fas fa-hand-holding-usd"></i> 
+        </a>
+    </div>
+</div>
+
+    <div class="container mt-4">
+        <div id="photoGallery" class="row">
+            <!-- Photos will be added here dynamically -->
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+    <script>
+        const photos = ["images/CLINICS 2.jpg",
+         "images/CLOTHES 1.jpg",
+          "images/CLOTHES 2.jpg",
+          "images/health3.jpg",
+          "images/home4.jpg",
+          "images/HOUSES 1.jpg",
+          "images/HOUSES 2.jpg",
+          "images/HOUSES 3.jpg",
+          "images/IMG-20230810-WA0012.jpg",
+          "images/IMG-20230810-WA0014.jpg",
+          "images/IMG-20230810-WA0018.jpg",
+          "images/IMG-20230810-WA0019.jpg",
+          "images/IMG-20230810-WA0021.jpg",
+          "images/IMG-20230810-WA0022.jpg",
+          "images/IMG-20230810-WA0023.jpg",
+          "images/IMG-20230810-WA0024.jpg",
+          "images/IMG-20230810-WA0025.jpg",
+          "images/IMG-20230810-WA0026.jpg",
+          "images/IMG-20230810-WA0027.jpg",
+          "images/IMG-20230810-WA0028.jpg",
+          "images/IMG-20230810-WA0029.jpg",
+          "images/IMG-20230810-WA0030.jpg",
+          "images/IMG-20230810-WA0031.jpg",
+          "images/IMG-20230810-WA0032.jpg",
+          "images/IMG-20230810-WA0033.jpg",
+          "images/IMG-20230810-WA0034.jpg",
+          "images/IMG-20230810-WA0035.jpg",
+          "images/IMG-20230810-WA0036.jpg",
+          "images/IMG-20230810-WA0037.jpg",
+          "images/IMG-20230810-WA0038.jpg",
+          "images/IMG-20230810-WA0039.jpg",
+          "images/IMG-20230810-WA0040.jpg",
+          "images/IMG-20230810-WA0041.jpg",
+          "images/IMG-20230810-WA0042.jpg",
+          "images/IMG-20230810-WA0043.jpg",
+          "images/IMG-20230810-WA0044.jpg",
+          "images/IMG-20230810-WA0045.jpg",
+          "images/IMG-20230810-WA0046.jpg",
+          "images/IMG-20230810-WA0047.jpg",
+          "images/IMG-20230810-WA0048.jpg",
+          "images/IMG-20230810-WA0049.jpg",
+          "images/IMG-20230810-WA0050.jpg",
+          "images/IMG-20230810-WA0051.jpg",
+          "images/IMG-20230810-WA0052.jpg",
+          "images/IMG-20230810-WA0053.jpg",
+          "images/IMG-20230810-WA0054.jpg",
+          "images/IMG-20230810-WA0055.jpg",
+          "images/IMG-20230810-WA0056.jpg",
+          "images/IMG-20230810-WA0057.jpg",
+          "images/IMG-20230810-WA0058.jpg",
+          "images/IMG-20230810-WA0059.jpg",
+          "images/IMG-20230810-WA0060.jpg",
+          "images/IMG-20230810-WA0062.jpg",
+          "images/IMG-20230810-WA0064.jpg",
+          "images/IMG-20230810-WA0065.jpg",
+          "images/IMG-20230810-WA0066.jpg",
+          "images/IMG-20230810-WA0067.jpg",
+          "images/IMG-20230810-WA0068.jpg",
+          "images/IMG-20230810-WA0069.jpg",
+          "images/IMG-20230810-WA0070.jpg",
+          "images/IMG-20230810-WA0071.jpg",
+          "images/IMG-20230810-WA0072.jpg",
+          "images/IMG-20230810-WA0073.jpg",
+          "images/IMG-20230810-WA0074.jpg",
+          "images/IMG-20230810-WA0075.jpg",
+          "images/IMG-20230810-WA0076.jpg",
+          "images/IMG-20230810-WA0077.jpg",
+          "images/IMG-20230810-WA0078.jpg",
+          "images/IMG-20230810-WA0079.jpg",
+          "images/IMG-20230810-WA0080.jpg",
+          "images/IMG-20230810-WA0081.jpg",
+          "images/IMG-20230810-WA0082.jpg",
+          "images/IMG-20230810-WA0083.jpg",
+          "images/IMG-20230810-WA0084.jpg",
+          "images/IMG-20230810-WA0085.jpg",
+          "images/IMG-20230810-WA0087.jpg",
+          "images/IMG-20230810-WA0088.jpg",
+          "images/IMG-20230810-WA0089.jpg",
+          "images/IMG-20230810-WA0090.jpg",
+          "images/IMG-20230810-WA0091.jpg",
+          "images/IMG-20230810-WA0093.jpg",
+          "images/IMG-20230810-WA0094.jpg",
+          "images/IMG-20230810-WA0096.jpg",
+          "images/IMG-20230810-WA0097.jpg",
+          "images/IMG-20230810-WA0098.jpg",
+          "images/IMG-20230810-WA0099.jpg",
+          "images/IMG-20230810-WA0102.jpg",
+          "images/IMG-20230810-WA0103.jpg",
+          "images/mosque1.jpg",
+          "images/orphan1.jpg",
+          "images/qurban1.jpg",
+          "images/qurban3.jpg",
+          "images/ramadhan.jpg",
+          "images/school2.jpg",
+          "images/school2.jpg",
+        "images/ramadhan.jpg",
+              ];
+
+        const galleryContainer = document.getElementById('photoGallery');
+
+        function loadPhotos() {
+            photos.forEach((photoURL, index) => {
+                const photoCard = `
+                    <div class="col-md-3 mb-4">
+                        <a href="${photoURL}" data-fancybox="gallery" data-caption="Photo ${index + 1}" data-group="all-photos">
+                            <div class="card">
+                                <img src="${photoURL}" class="card-img-top" alt="Photo">
+                            </div>
+                        </a>
+                    </div>
+                `;
+                galleryContainer.innerHTML += photoCard;
+            });
+        }
+
+        loadPhotos();
+    </script>
+</body>
+</html>
